@@ -1,7 +1,7 @@
 import { makeStyles } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
 import { Button } from "@material-ui/core";
-import background from "../../../assets/fonts/images/logo_b.png";
+import background from "../../../../assets/fonts/images/logo_b.png";
 export const useStyles = makeStyles((theme) => ({
   layout_login: {
     width: "100%",

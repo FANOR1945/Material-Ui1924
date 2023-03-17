@@ -15,5 +15,5 @@ export const useStylesReddit = makeStyles((theme) => ({
       borderColor: theme.palette.primary.main,
     },
   },
-  focused: {},
+
 }));

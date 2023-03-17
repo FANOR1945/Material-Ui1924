@@ -2,12 +2,12 @@ import React from "react";
 import { Box, Grid, Link, Hidden, Typography } from "@material-ui/core";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
-import { Content } from "../../../components/Global";
+import { Content } from "../../../../components/Global";
 import { useStyles } from "./signin.styles";
-import logoa from "../../../assets/fonts/images/logo_a.png";
-import PageLayout from "../../../layouts/PageLayout";
-import MyTextFieldInput from "../../../components/Global/MyTextField";
-import MyButton from "../../../components/Global/MyButton";
+import logoa from "../../../../assets/fonts/images/logo_a.png";
+import PageLayout from "../../../../layouts/PageLayout";
+import MyTextFieldInput from "../../../../components/Global/MyTextField";
+import MyButton from "../../../../components/Global/MyButton";
 
 const SignIn = () => {
   const classes = useStyles();
