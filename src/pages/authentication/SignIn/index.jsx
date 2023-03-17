@@ -3,11 +3,11 @@ import { Box, Grid, Link, Hidden, Typography } from "@material-ui/core";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 import { Content } from "../../../components/Global";
-import { BootstrapButton } from "./signin.styles";
 import { useStyles } from "./signin.styles";
 import logoa from "../../../assets/fonts/images/logo_a.png";
 import PageLayout from "../../../layouts/PageLayout";
 import { BootstrapInput } from "../../../assets/Theme/components/TextField";
+import MyButton from "../../../components/Global/MyButton";
 
 const SignIn = () => {
   const classes = useStyles();
@@ -47,11 +47,11 @@ const SignIn = () => {
               className={classes.input}
             />
             <Content className={classes.button}>
-              <BootstrapButton variant="contained" href="/home" color="primary">
+              <MyButton href="/home" color="orange" className={classes.button}>
                 <Typography className={classes.typography}>
                   Iniciar Sesión
                 </Typography>
-              </BootstrapButton>
+              </MyButton>
             </Content>
           </Grid>
           <Link href="/home" underline="none">

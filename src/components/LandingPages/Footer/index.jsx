@@ -29,7 +29,7 @@ const Footer = () => {
           titulo="Betanzos"
           texto="Potosí Bolivia"
           color="rgba(248,80,50,1)"
-          font="blue"
+          font="white"
         />
       </Grid>
     </Content>

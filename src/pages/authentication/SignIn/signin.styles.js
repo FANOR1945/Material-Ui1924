@@ -6,7 +6,6 @@ export const useStyles = makeStyles((theme) => ({
   layout_login: {
     width: "100%",
     justifyContent: "center",
-    border: "1px solid blue",
     padding: theme.spacing(1),
   },
 
@@ -35,6 +34,10 @@ export const useStyles = makeStyles((theme) => ({
 
   button: {
     width: "100%",
+    textTransform: "none",
+    paddingRight: theme.spacing(5),
+    paddingLeft: theme.spacing(5),
+    borderRadius: "2rem",
     alignItems: "center",
     justifyContent: "center",
   },

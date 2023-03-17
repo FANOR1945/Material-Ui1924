@@ -1,5 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles";
-export const useStyles = makeStyles((props) => ({
+export const useStyles = makeStyles(() => ({
   root: {
     textAlign: "center",
     background: (props) => props.color,
@@ -11,6 +11,6 @@ export const useStyles = makeStyles((props) => ({
   titulo: {
     fontWeight: "bold",
     fontSize: 22,
-    font: (props) => props.font,
+    color: (props) => props.font,
   },
 }));
