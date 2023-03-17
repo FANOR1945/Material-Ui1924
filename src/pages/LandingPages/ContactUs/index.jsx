@@ -6,18 +6,20 @@ import { useStyles } from "./contact_us.styles";
 const ContactUs = () => {
   const classes = useStyles();
   return (
-    <PageLayout>
-      <Grid container className={classes.layout_content}>
-        <MyCard className={classes.content_card}>Fanor Cards</MyCard>
-      </Grid>
-      <Grid container className={classes.layout_content}>
-        <MyCard className={classes.content_card}>Fanor Cards</MyCard>
-      </Grid>
-      <Grid container className={classes.layout_content}>
-        <MyCard className={classes.content_card}>Fanor Cards</MyCard>
-      </Grid>
-      <Grid container className={classes.layout_content}>
-        <MyCard className={classes.content_card}>Fanor Cards</MyCard>
+    <PageLayout container className={classes.layout_content}>
+      <Grid container className={classes.content_card}>
+        <Grid>
+          <MyCard>Fanor Cards</MyCard>
+        </Grid>
+        <Grid>
+          <MyCard>Fanor Cards</MyCard>
+        </Grid>
+        <Grid>
+          <MyCard>Fanor Cards</MyCard>
+        </Grid>
+        <Grid>
+          <MyCard>Fanor Cards</MyCard>
+        </Grid>{" "}
       </Grid>
     </PageLayout>
   );
