@@ -27,16 +27,20 @@ export const useStyles = makeStyles((theme) => ({
   form: { flexDirection: "column", fontSize: 14 },
 
   input: {
-    width: "17.5rem",
-    marginTop: "0.6rem",
-    marginBottom: "1rem",
+    borderRadius: "1rem",
+    color: "#138D75",
+    paddingTop: theme.spacing(0.5),
+    paddingRight: theme.spacing(1),
+    paddingLeft: theme.spacing(1),
+    paddingBottom: theme.spacing(0.5),
   },
 
   button: {
     width: "100%",
     textTransform: "none",
-    paddingRight: theme.spacing(5),
-    paddingLeft: theme.spacing(5),
+    marginTop: theme.spacing(1),
+    paddingRight: theme.spacing(5.9),
+    paddingLeft: theme.spacing(5.9),
     borderRadius: "2rem",
     alignItems: "center",
     justifyContent: "center",

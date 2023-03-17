@@ -6,7 +6,7 @@ import { Content } from "../../../components/Global";
 import { useStyles } from "./signin.styles";
 import logoa from "../../../assets/fonts/images/logo_a.png";
 import PageLayout from "../../../layouts/PageLayout";
-import { BootstrapInput } from "../../../assets/Theme/components/TextField";
+import MyTextFieldInput from "../../../components/Global/MyTextField";
 import MyButton from "../../../components/Global/MyButton";
 
 const SignIn = () => {
@@ -30,21 +30,27 @@ const SignIn = () => {
             className={classes.align_image_text}
           />
           <Grid container className={classes.form}>
-            <BootstrapInput
-              placeholder="Correo electrónico o número de télefono"
-              name="username"
+            <MyTextFieldInput
               className={classes.input}
+              color="#E9F7EF"
+              font="#A6ACAF"
+              placeholder="Correo electrónico o numero de télefono"
+              name="email"
+              type="text"
             />
             <Link href="/home" underline="none">
               <Typography className={classes.link}>
                 ¿Olvidaste tu Contraseña?{" "}
               </Typography>
             </Link>
-            <BootstrapInput
-              placeholder="Contraseña"
-              name="username"
-              type="password"
+
+            <MyTextFieldInput
               className={classes.input}
+              color="#E9F7EF"
+              font="#A6ACAF"
+              placeholder="Contraseña"
+              name="password"
+              type="password"
             />
             <Content className={classes.button}>
               <MyButton href="/home" color="orange" className={classes.button}>

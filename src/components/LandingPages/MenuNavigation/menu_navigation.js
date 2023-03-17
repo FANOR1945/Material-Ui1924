@@ -2,7 +2,6 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles((theme) => ({
   root: {
-    width: "100%",
     maxWidth: 360,
   },
   nested: {
@@ -10,7 +9,8 @@ export const useStyles = makeStyles((theme) => ({
   },
   button_nav: {
     width: "100%",
-    border: "1px solid red",
+
+    padding: theme.spacing(2),
   },
   tittle: {
     fontSize: "1.2rem",

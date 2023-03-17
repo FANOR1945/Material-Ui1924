@@ -20,7 +20,6 @@ const MyTextField = ({ children, className, ...props }) => {
         {" "}
         {children}
       </TextField>
-      ;
     </>
   );
 };
