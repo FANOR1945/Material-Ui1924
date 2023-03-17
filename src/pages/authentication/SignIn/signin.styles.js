@@ -7,7 +7,7 @@ export const useStyles = makeStyles((theme) => ({
     width: "100%",
     justifyContent: "center",
     border: "1px solid blue",
-    padding: theme.spacing(2),
+    padding: theme.spacing(1),
   },
 
   paperstyle: {

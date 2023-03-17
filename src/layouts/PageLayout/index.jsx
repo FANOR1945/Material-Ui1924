@@ -4,7 +4,7 @@ import { Content } from "../../components/Global";
 import { useStyles } from "./page_layout.styles";
 import Slider from "../../components/LandingPages/Slider";
 import AppBar from "../../components/LandingPages/AppBar";
-
+import Footer from "../../components/LandingPages/Footer";
 import DrawerNavigation from "../../components/LandingPages/DrawerNavigation";
 import { Hidden } from "@material-ui/core";
 
@@ -30,7 +30,9 @@ const PageLayout = (props) => {
           onClose={actionOpen}
         />
       </Hidden>
-      <Content className={classes.page_layout}>{props.children}</Content>
+      <Content className={classes.page_layout}>
+        {props.children} <Footer />
+      </Content>{" "}
     </Container>
   );
 };
