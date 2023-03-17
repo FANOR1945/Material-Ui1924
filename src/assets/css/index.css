@@ -23,5 +23,5 @@ body {
   display: flex;
   overflow: auto;
 
-  align-items: "center";
+  align-items: "flex-start";
 }
