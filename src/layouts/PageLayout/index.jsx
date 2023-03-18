@@ -12,23 +12,19 @@ const PageLayout = (props) => {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
 
-  const actionOpen = () => {
+  const barOpen = () => {
     setOpen(!open);
   };
   return (
     <Container>
       {" "}
       <Slider />
-      <AppBar actionOpen={actionOpen} />
+      <AppBar barOpen={barOpen} />
       <Hidden xlDown>
         <DrawerNavigation variant="permanent" open={false} />
       </Hidden>
       <Hidden xlUp>
-        <DrawerNavigation
-          variant="temporary"
-          open={open}
-          onClose={actionOpen}
-        />
+        <DrawerNavigation variant="temporary" open={open} onClose={barOpen} />
       </Hidden>
       <Content className={classes.page_layout}>
         {props.children} <Footer />

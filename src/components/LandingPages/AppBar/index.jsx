@@ -50,7 +50,7 @@ const AppBar = (props) => {
         <Hidden only={["md", "lg", "xl"]}>
           <IconButton
             className={classes.icon_bottom}
-            onClick={() => props.actionOpen()}
+            onClick={() => props.barOpen()}
           >
             <MenuIcon />
           </IconButton>
