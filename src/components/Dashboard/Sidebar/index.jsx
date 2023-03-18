@@ -1,20 +1,49 @@
-import React, { useState } from "react";
-import Drawer from "@material-ui/core/Drawer";
+import React, { useState, useContext } from "react";
+import { withStyles } from "@material-ui/core/styles";
+import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import Switch from "@material-ui/core/Switch";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
-import { useStyles } from "./sidebar.styles";
+import SettingsContext from "../../../context/AdapterDrawer/Settings/AroundDrawer/index";
 
-const Sidebar = () => {
-  const classes = useStyles();
+const styles = (theme) => ({
+  root: {
+    position: "fixed",
+    top: 5,
+    right: 5,
+  },
+  drawer: {
+    width: 250,
+  },
+  drawerItem: {
+    padding: 15,
+  },
+  textField: {
+    marginLeft: theme.spacing.unit,
+    marginRight: theme.spacing.unit,
+    width: 200,
+  },
+});
+
+const Sidebar = ({ classes, align = "right" }) => {
+  const context = useContext(SettingsContext);
   const [open, setOpen] = useState(false);
   return (
     <div className={classes.root}>
-      <IconButton color="inherit" onClick={() => setOpen(true)}>
-        <MenuIcon />
+      <IconButton
+        color="inherit"
+        aria-label="Settings"
+        onClick={() => setOpen(true)}
+      >
+        <Typography>
+          <MenuIcon fontSize="large" />
+        </Typography>
       </IconButton>
-      <Drawer
+      <SwipeableDrawer
+        anchor={align}
         open={open}
         onClose={() => setOpen(false)}
         onOpen={() => setOpen(true)}
@@ -31,11 +60,21 @@ const Sidebar = () => {
             Settings
           </Typography>
           <Divider />
-          <div className={classes.drawerItem} />
+          <div className={classes.drawerItem}>
+            <FormControlLabel
+              control={
+                <Switch
+                  checked={context.darkMode}
+                  onChange={() => context.onSetDarkMode(!context.darkMode)}
+                />
+              }
+              label="Dark Mode"
+            />
+          </div>
         </div>
-      </Drawer>
+      </SwipeableDrawer>
     </div>
   );
 };
 
-export default Sidebar;
+export default withStyles(styles)(Sidebar);
