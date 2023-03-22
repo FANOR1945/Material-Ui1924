@@ -1,28 +1,51 @@
-import React, { useContext } from "react";
-import { Container } from "../../components/Global";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import { useStyles } from "./dashboard_layout.styles";
-import { MuiThemeProvider } from "@material-ui/core/styles";
-import defaultTheme from "../../assets/Theme/AroundSettings/default";
-import darkTheme from "../../assets/Theme/AroundSettings/dark";
-import Sidebar from "../../components/Dashboard/Sidebar";
-import SettingsContext from "../../context/AdapterDrawer/Settings/AroundDrawer/index.jsx";
-import ProviderDrawer from "../../context/AdapterDrawer/Settings/ProviderDrawer";
+import React from 'react';
+import { CssBaseline, Drawer, Hidden, Box } from '@material-ui/core';
+import SidebarNavigation from '../../components/Dashboard/SidebarNavigation';
+import { useStyles } from './dashboard_layout.styles';
+import Header from '../../components/Dashboard/Header';
 
-const DashboarLayout = (props) => {
+const DashboardLayout = ({ navigationData, children }) => {
   const classes = useStyles();
-  const context = useContext(SettingsContext);
-  const theme = context.darkMode ? darkTheme : defaultTheme;
-  return (
-    <Container className={classes.dashboard_layout}>
-      <MuiThemeProvider theme={theme}>
-        <CssBaseline />
 
-        <Sidebar />
-        {props.children}
-      </MuiThemeProvider>{" "}
-    </Container>
+  return (
+    <Box className={classes.root}>
+      <CssBaseline />
+      <Header />
+      <Hidden smDown>
+        <Drawer
+          variant='permanent'
+          anchor='left'
+          classes={{
+            paper: classes.drawerPaper,
+          }}
+          ModalProps={{
+            keepMounted: true,
+          }}
+        >
+          {' '}
+          <SidebarNavigation data={navigationData} />
+        </Drawer>
+      </Hidden>
+      <Hidden mdDown>
+        <Drawer variant='temporary'>
+          {' '}
+          <SidebarNavigation data={navigationData} />
+        </Drawer>
+      </Hidden>
+      <Box className={classes.content}>
+        <Box className={classes.toolbar} />
+        <Box
+          style={{
+            flex: 1,
+            display: 'flex',
+            flexDirection: 'column',
+          }}
+        >
+          {children}
+        </Box>
+      </Box>
+    </Box>
   );
 };
 
-export default DashboarLayout;
+export default DashboardLayout;

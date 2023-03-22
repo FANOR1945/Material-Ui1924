@@ -1,13 +1,14 @@
-import React from "react";
+import React from 'react';
 
-import Routes from "./Routes";
+import PrivateRoutes from './Routes/PrivateRoutes';
+import PublicRoutes from './Routes/PublicRoutes';
 
 function App() {
   return (
     <>
-
-        <Routes />
-    
+      {' '}
+      <PrivateRoutes />
+      <PublicRoutes />
     </>
   );
 }
