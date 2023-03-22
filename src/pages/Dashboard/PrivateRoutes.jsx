@@ -2,10 +2,10 @@ import React from 'react';
 import { createTheme } from '@material-ui/core';
 import { ThemeProvider } from '@material-ui/styles';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import DashboardLayout from '../layouts/DashboardLayout';
-import { themeL, themeD } from '../themes';
-import { mainNavigation, mainRoutes } from '../data';
-import RoutesWithLayout from '../components/Dashboard/RoutesWithLayout';
+import DashboardLayout from '../../layouts/DashboardLayout';
+import { themeL, themeD } from '../../themes';
+import { mainNavigation, mainRoutes } from '../../data';
+import RoutesWithLayout from '../../components/Dashboard/RoutesWithLayout';
 
 const PrivateRoutes = () => {
   const [darkMode, setDarkMode] = React.useState(() => {
@@ -29,20 +29,19 @@ const PrivateRoutes = () => {
 
   const appliedTheme = createTheme(darkMode ? themeD : themeL);
   return (
-    <Router>
-      <Switch>
-        <ThemeProvider theme={appliedTheme}>
-          <RoutesWithLayout
-            layout={DashboardLayout}
-            routes={mainRoutes}
-            LayoutProps={{
-              navigationData: mainNavigation,
-              themeConfig: themeSwitchCofig,
-            }}
-          />
-        </ThemeProvider>
-      </Switch>
-    </Router>
+    <ThemeProvider theme={appliedTheme}>
+      {' '}
+      <Router>
+        <RoutesWithLayout
+          layout={DashboardLayout}
+          routes={mainRoutes}
+          LayoutProps={{
+            navigationData: mainNavigation,
+            themeConfig: themeSwitchCofig,
+          }}
+        />{' '}
+      </Router>
+    </ThemeProvider>
   );
 };
 

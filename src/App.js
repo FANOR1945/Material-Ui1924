@@ -1,14 +1,13 @@
 import React from 'react';
 
-import PrivateRoutes from './Routes/PrivateRoutes';
+import PrivateRoutes from './pages/Dashboard/PrivateRoutes';
 import PublicRoutes from './Routes/PublicRoutes';
 
 function App() {
   return (
     <>
-      {' '}
-      <PrivateRoutes />
       <PublicRoutes />
+      <PrivateRoutes />
     </>
   );
 }

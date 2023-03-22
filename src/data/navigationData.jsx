@@ -8,6 +8,11 @@ import {
 
 export const mainNavigation = [
   {
+    name: 'Pesentation',
+    icon: Dashboard,
+    url: `/presentation`,
+  },
+  {
     name: 'Principal',
     icon: Dashboard,
     url: `/major`,

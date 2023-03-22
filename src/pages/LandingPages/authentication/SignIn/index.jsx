@@ -53,9 +53,8 @@ const SignIn = () => {
               type='password'
             />
             <Content className={classes.button}>
-              <Link href='/home' underline='none'>
+              <Link href='/major' underline='none'>
                 <MyButton
-                  href='/home'
                   color='orange'
                   hover='#D4AC0D'
                   className={classes.button}
@@ -67,7 +66,7 @@ const SignIn = () => {
               </Link>
             </Content>
           </Grid>
-          <Link href='/major' underline='none'>
+          <Link href='#' underline='none'>
             <Typography className={classes.typography}>
               Crear Cuenta Nueva
             </Typography>

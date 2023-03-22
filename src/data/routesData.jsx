@@ -17,6 +17,7 @@ function importPage(...args) {
 }
 /////hook///
 export const mainRoutes = [
+
   {
     path: `/major`,
     component: lazy(() => importPage(['Dashboard'])),

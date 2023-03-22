@@ -3,12 +3,13 @@ import { CssBaseline, Drawer, Hidden, Box } from '@material-ui/core';
 import SidebarNavigation from '../../components/Dashboard/SidebarNavigation';
 import { useStyles } from './dashboard_layout.styles';
 import Header from '../../components/Dashboard/Header';
+import { Container } from '../../components/Global';
 
 const DashboardLayout = ({ navigationData, children }) => {
   const classes = useStyles();
 
   return (
-    <Box className={classes.root}>
+    <Container>
       <CssBaseline />
       <Header />
       <Hidden smDown>
@@ -44,7 +45,7 @@ const DashboardLayout = ({ navigationData, children }) => {
           {children}
         </Box>
       </Box>
-    </Box>
+    </Container>
   );
 };
 

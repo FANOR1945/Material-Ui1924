@@ -8,17 +8,15 @@ import ProviderDrawer from '../context/AdapterDrawer/Settings/ProviderDrawer';
 
 const PublicRoutes = (props) => {
   return (
-    <ProviderDrawer>
-      <Theme>
-        <Router>
-          <Switch>
-            <Route exact path='/' component={Presentation} />
-            <Route exact path='/sign-in' component={SignIn} />
-            <Route exact path='/contact-us' component={ContactUs} />
-          </Switch>
-        </Router>
-      </Theme>{' '}
-    </ProviderDrawer>
+    <Theme>
+      <Router>
+        <Switch>
+          <Route exact path='/presentation' component={Presentation} />
+          <Route exact path='/sign-in' component={SignIn} />
+          <Route exact path='/contact-us' component={ContactUs} />
+        </Switch>
+      </Router>
+    </Theme>
   );
 };
 
