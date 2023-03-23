@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Button, makeStyles } from '@material-ui/core';
-import PageBody from '../../../components/Dashboard/PageBody';
-import PageHeader from '../../../components/Dashboard/PageHeader';
+import PageBody from '../../../../components/Dashboard/PageBody';
+import PageHeader from '../../../../components/Dashboard/PageHeader';
 
 const useStyles = makeStyles((theme) => ({
   leftSpacing: {

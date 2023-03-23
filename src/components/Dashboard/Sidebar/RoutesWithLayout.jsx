@@ -1,5 +1,5 @@
 import React from 'react';
-import Spinner from './Spinner';
+import Spinner from '../../Global/Spinner';
 import Routes from './Routes/Routes';
 const RoutesWithLayout = ({ layout: Layout, routes, LayoutProps }) => {
   return (

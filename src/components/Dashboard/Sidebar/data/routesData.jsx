@@ -13,14 +13,14 @@ function importPage(...args) {
       return arg;
     })
     .join('/');
-  return import(`../pages/${path}`);
+  return import(`../../../../pages/Dashboard/${path}`);
 }
 /////hook///
 export const mainRoutes = [
 
   {
     path: `/major`,
-    component: lazy(() => importPage(['Dashboard'])),
+    component: lazy(() => importPage(['Main'])),
   },
   {
     path: `/producers`,

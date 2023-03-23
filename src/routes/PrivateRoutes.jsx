@@ -1,11 +1,11 @@
 import React from 'react';
 import { createTheme } from '@material-ui/core';
 import { ThemeProvider } from '@material-ui/styles';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import DashboardLayout from '../../layouts/DashboardLayout';
-import { themeL, themeD } from '../../themes';
-import { mainNavigation, mainRoutes } from '../../data';
-import RoutesWithLayout from '../../components/Dashboard/RoutesWithLayout';
+import { BrowserRouter as Router } from 'react-router-dom';
+import DashboardLayout from '../layouts/DashboardLayout';
+import { themeL, themeD } from '../themes';
+import { mainNavigation, mainRoutes } from '../components/Dashboard/Sidebar/data';
+import RoutesWithLayout from '../components/Dashboard/Sidebar/RoutesWithLayout';
 
 const PrivateRoutes = () => {
   const [darkMode, setDarkMode] = React.useState(() => {
@@ -29,9 +29,8 @@ const PrivateRoutes = () => {
 
   const appliedTheme = createTheme(darkMode ? themeD : themeL);
   return (
-    <ThemeProvider theme={appliedTheme}>
-      {' '}
-      <Router>
+    <Router>
+      <ThemeProvider theme={appliedTheme}>
         <RoutesWithLayout
           layout={DashboardLayout}
           routes={mainRoutes}
@@ -39,9 +38,9 @@ const PrivateRoutes = () => {
             navigationData: mainNavigation,
             themeConfig: themeSwitchCofig,
           }}
-        />{' '}
-      </Router>
-    </ThemeProvider>
+        />
+      </ThemeProvider>
+    </Router>
   );
 };
 

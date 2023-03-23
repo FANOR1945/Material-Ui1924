@@ -1,6 +1,6 @@
 import React from 'react';
 import { CssBaseline, Drawer, Hidden, Box } from '@material-ui/core';
-import SidebarNavigation from '../../components/Dashboard/SidebarNavigation';
+import SidebarNavigation from '../../components/Dashboard/Sidebar/SidebarNavigation';
 import { useStyles } from './dashboard_layout.styles';
 import Header from '../../components/Dashboard/Header';
 import { Container } from '../../components/Global';

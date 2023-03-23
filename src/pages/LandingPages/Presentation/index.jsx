@@ -1,8 +1,8 @@
 import React from "react";
-import MyButton from "../../components/Global/MyButton";
-import MyTextFieldInput from "../../components/Global/MyTextField";
+import MyButton from "../../../components/Global/MyButton";
+import MyTextFieldInput from "../../../components/Global/MyTextField";
 import { Grid } from "@material-ui/core";
-import PageLayout from "../../layouts/PageLayout";
+import PageLayout from "../../../layouts/PageLayout";
 import { useStyles } from "./presentation.styles";
 const Presentation = () => {
   const classes = useStyles();

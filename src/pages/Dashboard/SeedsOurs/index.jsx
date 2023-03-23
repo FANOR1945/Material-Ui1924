@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box } from '@material-ui/core';
-import PageBody from '../../components/Dashboard/PageBody';
+import PageBody from '../../../components/Dashboard/PageBody';
 import { useStyles } from './seeds_ours.styles';
 const SeedsOurs = () => {
   const classes = useStyles();

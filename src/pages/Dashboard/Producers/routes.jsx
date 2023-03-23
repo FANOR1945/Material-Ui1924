@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Routes from '../../components/Dashboard/Routes/Routes';
+import Routes from '../../../components/Dashboard/Sidebar/Routes/Routes';
 
 const ProducersRoutes = ({ routes }) => {
   return <Routes routes={routes} />;

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Box } from '@material-ui/core';
-import PageBody from '../../components/Dashboard/PageBody';
-import PageHeader from '../../components/Dashboard/PageHeader';
+import PageBody from '../../../components/Dashboard/PageBody';
+import PageHeader from '../../../components/Dashboard/PageHeader';
 import { useStyles } from './dashboard.styles';
-const Dashboard = () => {
+const Main = () => {
   const classes = useStyles();
   return (
     <React.Fragment>
@@ -19,4 +19,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default Main;

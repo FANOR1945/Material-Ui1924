@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box } from '@material-ui/core';
-import PageBody from '../../../components/Dashboard/PageBody';
-import PageHeader from '../../../components/Dashboard/PageHeader';
+import PageBody from '../../../../components/Dashboard/PageBody';
+import PageHeader from '../../../../components/Dashboard/PageHeader';
 
 const Extern = () => {
   return (

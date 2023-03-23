@@ -18,10 +18,11 @@ const Routes = ({ routes }) => {
   //hook//////////
   return (
     <>
-      <Switch>{renderRoutes}</Switch>
+       <Switch>{renderRoutes}</Switch>
       <Route path={`${match.path}/`} exact={true}>
         <Redirect to={`${routes[0].path}`} />
       </Route>
+   
     </>
   );
 };

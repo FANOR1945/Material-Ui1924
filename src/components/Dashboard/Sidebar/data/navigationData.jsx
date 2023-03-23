@@ -7,11 +7,7 @@ import {
 } from '@material-ui/icons';
 
 export const mainNavigation = [
-  {
-    name: 'Pesentation',
-    icon: Dashboard,
-    url: `/presentation`,
-  },
+ 
   {
     name: 'Principal',
     icon: Dashboard,
