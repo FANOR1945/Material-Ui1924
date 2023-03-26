@@ -8,11 +8,11 @@ import {
 } from '@material-ui/core';
 import { Menu as MenuIcon } from '@material-ui/icons';
 import { useStyles } from './header.styles';
-const Header = (props) => { const logout= () =>{
-
-  sessionStorage.clear()
-  window.location.href="/"
-}
+const Header = (props) => {
+  const logout = () => {
+    sessionStorage.clear();
+    window.location.href = '/';
+  };
   const classes = useStyles();
 
   return (
@@ -23,13 +23,16 @@ const Header = (props) => { const logout= () =>{
           aria-label='open drawer'
           edge='start'
           className={classes.menuButton}
+          onClick={() => props.handleDrawerToggle()}
         >
           <MenuIcon fontSize='large' />
         </IconButton>
         <Typography variant='h6' className={classes.tittle}>
           Planta Betanzos
         </Typography>
-        <Button  variant="text" onClick={() =>logout()}>Fanor</Button>
+        <Button variant='text' onClick={() => logout()}>
+          Fanor
+        </Button>
       </Toolbar>
     </AppBar>
   );

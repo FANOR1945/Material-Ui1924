@@ -1,30 +1,12 @@
-import React from 'react';
-import { useHistory } from 'react-router';
-export const useDrawer = () => {
-  const history = useHistory();
-  const [extended, setExtended] = React.useState(true);
+import React, { useState } from 'react';
 
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+const useDrawer = () => {
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
 
-  const handleExtendOpen = () => {
-    setExtended(true);
-  };
-  const handleExtendClose = () => {
-    setExtended(false);
-  };
-
-  React.useEffect(() => {
-    history.listen(() => setMobileOpen(false));
-  }, [history]);
-  return [
-    extended,
-    mobileOpen,
-    handleDrawerToggle,
-    handleExtendClose,
-    handleExtendOpen,
-  ];
+  return [mobileOpen, handleDrawerToggle];
 };
+export default useDrawer;
