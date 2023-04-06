@@ -8,6 +8,7 @@ import useDrawer from '../../hooks/useDrawer';
 const DashboardLayout = ({ navigationData, children }) => {
   const classes = useStyles();
   const [mobileOpen, handleDrawerToggle] = useDrawer();
+
   return (
     <Container>
       <CssBaseline />

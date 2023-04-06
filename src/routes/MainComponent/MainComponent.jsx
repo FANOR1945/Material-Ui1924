@@ -13,7 +13,7 @@ function MainComponent() {
   return <PrivateRoutes />;
 }
 
-function RenterRoutes() {
+const RenterRoutes=()=> {
   return (
     <Switch>
       <Route
@@ -25,17 +25,17 @@ function RenterRoutes() {
         exact
         path='/about-us'
         component={AboutUs}
-      />{' '}
+      />
       <Route
         exact
         path='/seedsours'
         component={SeedsOurs}
-      />{' '}
+      />
       <Route
         exact
-        path='/services-ours'
+        path='/services'
         component={ServicesOurs}
-      />{' '}
+      />
       <Route
         exact
         path='/contact-us'

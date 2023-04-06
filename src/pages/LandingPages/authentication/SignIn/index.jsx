@@ -11,49 +11,52 @@ import MyButton from '../../../../components/Global/MyButton';
 
 const SignIn = () => {
   const classes = useStyles();
+
   return (
     <PageLayout>
-      <Grid container className={classes.layout_login}>
-        <Grid className={classes.paperstyle}>
-          <Hidden only={['md', 'lg']}>
-            <Grid container>
-              <Box className={classes.logo}>
-                <IconButton>
-                  <CloseIcon />
-                </IconButton>
-              </Box>
-            </Grid>
-          </Hidden>
-          <Box
-            component='img'
-            src={logoa}
-            className={classes.align_image_text}
-          />
-          <Grid container className={classes.form}>
-            <MyTextFieldInput
-              className={classes.input}
-              color='#E9F7EF'
-              font='#A6ACAF'
-              placeholder='Correo electrónico o numero de télefono'
-              name='email'
-              type='text'
+      <Content>
+        <Grid
+          container
+          className={classes.layout_login}
+        >
+          <Grid className={classes.paperstyle}>
+            <Hidden only={['md', 'lg']}>
+              <Grid container>
+                <Box className={classes.logo}>
+                  <IconButton>
+                    <CloseIcon />
+                  </IconButton>
+                </Box>
+              </Grid>
+            </Hidden>
+            <Box
+              component='img'
+              src={logoa}
+              className={classes.align_image_form}
             />
-            <Link href='/home' underline='none'>
-              <Typography className={classes.link}>
-                ¿Olvidaste tu Contraseña?{' '}
-              </Typography>
-            </Link>
+            <Content className={classes.form}>
+              <MyTextFieldInput
+                className={classes.input}
+                color='#E9F7EF'
+                font='#A6ACAF'
+                placeholder='Correo electrónico o numero de télefono'
+                name='email'
+                type='text'
+              />
 
-            <MyTextFieldInput
-              className={classes.input}
-              color='#E9F7EF'
-              font='#A6ACAF'
-              placeholder='Contraseña'
-              name='password'
-              type='password'
-            />
-            <Content className={classes.button}>
-              <Link href='/major' underline='none'>
+              <MyTextFieldInput
+                className={classes.input}
+                color='#E9F7EF'
+                font='#A6ACAF'
+                placeholder='Contraseña'
+                name='password'
+                type='password'
+              />
+
+              <Link
+                href='/major'
+                underline='none'
+              >
                 <MyButton
                   color='orange'
                   hover='#D4AC0D'
@@ -64,15 +67,27 @@ const SignIn = () => {
                   </Typography>
                 </MyButton>{' '}
               </Link>
+              <Link
+                href='/home'
+                underline='none'
+              >
+                <Typography className={classes.link}>
+                  ¿Olvidaste tu Contraseña?
+                </Typography>
+              </Link>
+              {/*}
+              <Link
+                href='#'
+                underline='none'
+              >
+                <Typography className={classes.typography}>
+                  Crear Cuenta Nueva
+                </Typography>
+  </Link>*/}
             </Content>
           </Grid>
-          <Link href='#' underline='none'>
-            <Typography className={classes.typography}>
-              Crear Cuenta Nueva
-            </Typography>
-          </Link>
         </Grid>
-      </Grid>
+      </Content>
     </PageLayout>
   );
 };

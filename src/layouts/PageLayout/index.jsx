@@ -12,12 +12,16 @@ import useDrawer from '../../hooks/useDrawer';
 const PageLayout = (props) => {
   const classes = useStyles();
   const [mobileOpen, handleDrawerToggle] = useDrawer();
+
   return (
     <Container>
       <Slider />
       <AppBar handleDrawerToggle={handleDrawerToggle} />
       <Hidden xlDown>
-        <DrawerNavigation variant='permanent' mobileOpen={false} />
+        <DrawerNavigation
+          variant='permanent'
+          mobileOpen={false}
+        />
       </Hidden>
       <Hidden xlUp>
         <DrawerNavigation

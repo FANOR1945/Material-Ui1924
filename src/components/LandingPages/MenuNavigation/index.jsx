@@ -43,43 +43,60 @@ const MenuNavigation = () => {
           <Typography className={classes.typography}>INGRESAR</Typography>
         </MyButton>{' '}
       </Link>
-      <MyButton
-        color='#212F3C'
-        font='#EBF5FB'
-        hover='#2C3E50'
-        className={classes.button_nav}
+      <Link
+        href='/about-us'
+        underline='none'
       >
-        <Typography className={classes.typography}>SOBRE NOSOTROS</Typography>
-      </MyButton>
-      <MyButton
-        color='#212F3C'
-        font='#EBF5FB'
-        hover='#2C3E50'
-        className={classes.button_nav}
-        onClick={() => onItemClicked('/seedsours')}
+        <MyButton
+          color='#212F3C'
+          font='#EBF5FB'
+          hover='#2C3E50'
+          className={classes.button_nav}
+        >
+          <Typography className={classes.typography}>SOBRE NOSOTROS</Typography>
+        </MyButton>{' '}
+      </Link>
+      <Link
+        href='/seedsours'
+        underline='none'
       >
-        <Typography className={classes.typography}>
-          NUESTRAS SEMILLAS
-        </Typography>
-      </MyButton>
-      <MyButton
-        href='/services-ours'
-        color='#212F3C'
-        font='#EBF5FB'
-        hover='#2C3E50'
-        className={classes.button_nav}
+        <MyButton
+          color='#212F3C'
+          font='#EBF5FB'
+          hover='#2C3E50'
+          className={classes.button_nav}
+        >
+          <Typography className={classes.typography}>
+            NUESTRAS SEMILLAS
+          </Typography>
+        </MyButton>{' '}
+      </Link>
+      <Link
+        href='/services'
+        underline='none'
       >
-        <Typography className={classes.typography}>SERVICIOS</Typography>
-      </MyButton>
-      <MyButton
+        <MyButton
+          color='#212F3C'
+          font='#EBF5FB'
+          hover='#2C3E50'
+          className={classes.button_nav}
+        >
+          <Typography className={classes.typography}>SERVICIOS</Typography>
+        </MyButton>
+      </Link>
+      <Link
         href='/contact-us'
-        color='#212F3C'
-        font='#EBF5FB'
-        hover='#2C3E50'
-        className={classes.button_nav}
+        underline='none'
       >
-        <Typography className={classes.typography}>SERVICIOS</Typography>
-      </MyButton>
+        <MyButton
+          color='#212F3C'
+          font='#EBF5FB'
+          hover='#2C3E50'
+          className={classes.button_nav}
+        >
+          <Typography className={classes.typography}>CONTACTO</Typography>
+        </MyButton>
+      </Link>
     </List>
   );
 };

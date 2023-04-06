@@ -15,26 +15,49 @@ import { useStyles } from './app_bar.styles';
 const AppBar = (props) => {
   const classes = useStyles();
   return (
-    <Grid container spacing={2} className={classes.content_appbar}>
-      <Grid container className={classes.griditems}>
+    <Grid
+      container
+      spacing={2}
+      className={classes.content_appbar}
+    >
+      <Grid
+        container
+        className={classes.griditems}
+      >
         <Link href='/'>
           {' '}
-          <Box component='img' src={logoImage} className={classes.image_logo} />
+          <Box
+            component='img'
+            src={logoImage}
+            className={classes.image_logo}
+          />
         </Link>
         <Hidden smDown>
           <Content className={classes.menu_landing_pages}>
-            <Link href='/about-us' underline='none'>
+            <Link
+              href='/about-us'
+              underline='none'
+            >
               <Typography className={classes.tittle}>Sobre Nosotros</Typography>
             </Link>
-            <Link href='/seedsours' underline='none'>
+            <Link
+              href='/seedsours'
+              underline='none'
+            >
               <Typography className={classes.tittle}>
                 Nuestras Semillas
               </Typography>
             </Link>
-            <Link href='/services-ours' underline='none'>
+            <Link
+              href='/services'
+              underline='none'
+            >
               <Typography className={classes.tittle}>Servicios</Typography>
             </Link>
-            <Link href='/contact-us' underline='none'>
+            <Link
+              href='/contact-us'
+              underline='none'
+            >
               <Typography className={classes.tittle}>Contacto</Typography>
             </Link>
           </Content>
