@@ -26,7 +26,7 @@ const AppBar = (props) => {
             <Link href='/about-us' underline='none'>
               <Typography className={classes.tittle}>Sobre Nosotros</Typography>
             </Link>
-            <Link href='/seeds-ours' underline='none'>
+            <Link href='/seedsours' underline='none'>
               <Typography className={classes.tittle}>
                 Nuestras Semillas
               </Typography>

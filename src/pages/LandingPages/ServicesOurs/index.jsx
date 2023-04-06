@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 const ServicesOurs = () => {
-  return (
-    <div>ServicesOurs</div>
-  )
-}
+  return <div>ServicesOurs</div>;
+};
 
-export default ServicesOurs
+export default ServicesOurs;
