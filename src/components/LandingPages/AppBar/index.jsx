@@ -41,7 +41,7 @@ const AppBar = (props) => {
               <Typography className={classes.tittle}>Sobre Nosotros</Typography>
             </Link>
             <Link
-              href='/seedsours'
+              href='/seeds-ours'
               underline='none'
             >
               <Typography className={classes.tittle}>
@@ -49,7 +49,7 @@ const AppBar = (props) => {
               </Typography>
             </Link>
             <Link
-              href='/services'
+              href='/services-ours'
               underline='none'
             >
               <Typography className={classes.tittle}>Servicios</Typography>

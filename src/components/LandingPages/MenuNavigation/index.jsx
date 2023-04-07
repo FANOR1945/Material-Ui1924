@@ -41,7 +41,7 @@ const MenuNavigation = () => {
           className={classes.button_nav}
         >
           <Typography className={classes.typography}>INGRESAR</Typography>
-        </MyButton>{' '}
+        </MyButton>
       </Link>
       <Link
         href='/about-us'
@@ -54,10 +54,10 @@ const MenuNavigation = () => {
           className={classes.button_nav}
         >
           <Typography className={classes.typography}>SOBRE NOSOTROS</Typography>
-        </MyButton>{' '}
+        </MyButton>
       </Link>
       <Link
-        href='/seedsours'
+        href='/seeds-ours'
         underline='none'
       >
         <MyButton
@@ -69,10 +69,10 @@ const MenuNavigation = () => {
           <Typography className={classes.typography}>
             NUESTRAS SEMILLAS
           </Typography>
-        </MyButton>{' '}
+        </MyButton>
       </Link>
       <Link
-        href='/services'
+        href='/services-ours'
         underline='none'
       >
         <MyButton

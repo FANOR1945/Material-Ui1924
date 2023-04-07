@@ -5,15 +5,13 @@ import PrivateRoutes from '../PrivateRoutes';
 
 import Presentation from '../../pages/LandingPages/Presentation';
 import SignIn from '../../pages/LandingPages/authentication/SignIn';
+import RePassword from '../../pages/LandingPages/authentication/RePassword';
 import AboutUs from '../../pages/LandingPages/AboutUs';
 import SeedsOurs from '../../pages/LandingPages/SeedsOurs';
 import ServicesOurs from '../../pages/LandingPages/ServicesOurs';
 import ContactUs from '../../pages/LandingPages/ContactUs';
-function MainComponent() {
-  return <PrivateRoutes />;
-}
 
-const RenterRoutes=()=> {
+const RenterRoutes = () => {
   return (
     <Switch>
       <Route
@@ -28,12 +26,12 @@ const RenterRoutes=()=> {
       />
       <Route
         exact
-        path='/seedsours'
+        path='/seeds-ours'
         component={SeedsOurs}
       />
       <Route
         exact
-        path='/services'
+        path='/services-ours'
         component={ServicesOurs}
       />
       <Route
@@ -46,11 +44,12 @@ const RenterRoutes=()=> {
         component={SignIn}
       />
       <Route
-        path={`/`}
-        component={MainComponent}
+        path='/re-password'
+        component={RePassword}
       />
+      <PrivateRoutes />
     </Switch>
   );
-}
+};
 
 export default RenterRoutes;

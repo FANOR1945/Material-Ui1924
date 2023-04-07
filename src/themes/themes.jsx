@@ -2,14 +2,14 @@
 let cc = 1;
 
 const combinations = [
-  ["#21A3A3", "#135757", "#00D3BA", "#207373"],
-  ["#477FF0", "#03379e", "#3e78ff", "#4141cc"],
-  ["#8D4BF2", "#4e05bc", "#8D4BF2", "#4e05bc"],
+  ['#7e837c', '#474946', '#ccd1cb', '#252625'],
+  ['#21A3A3', '#135757', '#00D3BA', '#207373'],
+  ['#8aba75', '#c8ecb8', '#90c17a', '#43e50a'],
 ];
 
 export const themeL = {
   palette: {
-    type: "light",
+    type: 'light',
     primary: {
       main: combinations[cc][0],
     },
@@ -18,13 +18,13 @@ export const themeL = {
     },
   },
   typography: {
-    fontFamily: "Ubuntu, Roboto, Arial, sans-serif",
+    fontFamily: 'Ubuntu, Roboto, Arial, sans-serif',
   },
 };
 
 export const themeD = {
   palette: {
-    type: "dark",
+    type: 'dark',
     primary: {
       main: combinations[cc][2],
     },
@@ -33,6 +33,6 @@ export const themeD = {
     },
   },
   typography: {
-    fontFamily: "Ubuntu, Roboto, Arial, sans-serif",
+    fontFamily: 'Ubuntu, Roboto, Arial, sans-serif',
   },
 };

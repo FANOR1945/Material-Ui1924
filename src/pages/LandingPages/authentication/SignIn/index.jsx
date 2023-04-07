@@ -68,7 +68,7 @@ const SignIn = () => {
                 </MyButton>{' '}
               </Link>
               <Link
-                href='/home'
+                href='/re-password'
                 underline='none'
               >
                 <Typography className={classes.link}>

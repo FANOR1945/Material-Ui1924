@@ -2,20 +2,24 @@ import React from 'react';
 import { Box } from '@material-ui/core';
 import PageBody from '../../../components/Dashboard/PageBody';
 import PageHeader from '../../../components/Dashboard/PageHeader';
-import { useStyles } from './dashboard.styles';
+import { useStyles } from './main.styles';
 const Main = () => {
   const classes = useStyles();
   return (
-    <React.Fragment>
+    <Box>
       <PageHeader title='Sistema de Acondicionamiento de Semillas' />
-      <PageBody style={{ display: 'flex' }}>
-        {/*important change style to style.js  */}
+      <PageBody>
         <Box className={classes.content_body}>
+          <h1>Bienvenido</h1>
+          <p>Plant Betanzos</p>
+          <h1>Bienvenido</h1>
+          <p>Plant Betanzos</p>
+
           <h1>Bienvenido</h1>
           <p>Plant Betanzos</p>
         </Box>
       </PageBody>
-    </React.Fragment>
+    </Box>
   );
 };
 

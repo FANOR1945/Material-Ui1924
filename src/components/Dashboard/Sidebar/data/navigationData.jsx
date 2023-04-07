@@ -7,7 +7,6 @@ import {
 } from '@material-ui/icons';
 
 export const mainNavigation = [
- 
   {
     name: 'Principal',
     icon: Dashboard,
@@ -33,6 +32,21 @@ export const mainNavigation = [
   {
     name: 'Nuestas Semillas',
     icon: PeopleAlt,
-    url: `/seeds_ours`,
+    url: `/seeds_varieties`,
+  },
+  {
+    name: 'Tarifas',
+    icon: PeopleAlt,
+    url: `/rates_seeds`,
+  },
+  {
+    name: 'Programaciones',
+    icon: PeopleAlt,
+    url: `/programing_conditioning`,
+  },
+  {
+    name: 'Muestreo',
+    icon: PeopleAlt,
+    url: `/sampling_seeds`,
   },
 ];

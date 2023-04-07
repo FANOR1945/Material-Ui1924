@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 export const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
-    height: '100vh',
+    minheight: '100vh',
   },
 
   menuButton: {
@@ -16,9 +16,19 @@ export const useStyles = makeStyles((theme) => ({
   toolbar: theme.mixins.toolbar,
 
   content: {
+    flexGrow: 1,
+
+    display: 'flex',
+    flexDirection: 'column',
+
     [theme.breakpoints.up('md')]: {
       width: `calc(100% - ${240}px)`,
       marginLeft: 240,
     },
+  },
+  content_body: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
   },
 }));

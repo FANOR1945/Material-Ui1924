@@ -1,10 +1,13 @@
 import React from 'react';
 import { createTheme } from '@material-ui/core';
 import { ThemeProvider } from '@material-ui/styles';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Switch } from 'react-router-dom';
 import DashboardLayout from '../layouts/DashboardLayout';
 import { themeL, themeD } from '../themes';
-import { mainNavigation, mainRoutes } from '../components/Dashboard/Sidebar/data';
+import {
+  mainNavigation,
+  mainRoutes,
+} from '../components/Dashboard/Sidebar/data';
 import RoutesWithLayout from '../components/Dashboard/Sidebar/RoutesWithLayout';
 
 const PrivateRoutes = () => {
@@ -29,18 +32,16 @@ const PrivateRoutes = () => {
 
   const appliedTheme = createTheme(darkMode ? themeD : themeL);
   return (
-    <Router>
-      <ThemeProvider theme={appliedTheme}>
-        <RoutesWithLayout
-          layout={DashboardLayout}
-          routes={mainRoutes}
-          LayoutProps={{
-            navigationData: mainNavigation,
-            themeConfig: themeSwitchCofig,
-          }}
-        />
-      </ThemeProvider>
-    </Router>
+    <ThemeProvider theme={appliedTheme}>
+      <RoutesWithLayout
+        layout={DashboardLayout}
+        routes={mainRoutes}
+        LayoutProps={{
+          navigationData: mainNavigation,
+          themeConfig: themeSwitchCofig,
+        }}
+      />
+    </ThemeProvider>
   );
 };
 

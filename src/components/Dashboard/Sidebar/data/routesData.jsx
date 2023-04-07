@@ -17,7 +17,6 @@ function importPage(...args) {
 }
 /////hook///
 export const mainRoutes = [
-
   {
     path: `/major`,
     component: lazy(() => importPage(['Main'])),
@@ -37,7 +36,19 @@ export const mainRoutes = [
     ],
   },
   {
-    path: `/seeds_ours`,
-    component: lazy(() => importPage(['SeedsOurs'])),
+    path: `/seeds_varieties`,
+    component: lazy(() => importPage(['SeedsVarieties'])),
+  },
+  {
+    path: `/rates_seeds`,
+    component: lazy(() => importPage(['RatesSeeds'])),
+  },
+  {
+    path: `/programing_conditioning`,
+    component: lazy(() => importPage(['ProgramingConditioning'])),
+  },
+  {
+    path: `/sampling_seeds`,
+    component: lazy(() => importPage(['SamplingSeeds'])),
   },
 ];

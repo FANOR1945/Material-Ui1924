@@ -1,26 +1,21 @@
 import React from 'react';
 import { Box } from '@material-ui/core';
+
 import PageBody from '../../../../components/Dashboard/PageBody';
 import PageHeader from '../../../../components/Dashboard/PageHeader';
-
+import { useStyles } from './extern.styles';
 const Extern = () => {
+  const classes = useStyles();
   return (
-    <React.Fragment>
+    <Box>
       <PageHeader title='Productores Externos' />
-      <PageBody style={{ display: 'flex' }}>
-        <Box
-          flexGrow='1'
-          width='100%'
-          display='flex'
-          flexDirection='column'
-          alignItems='center'
-          justifyContent='center'
-        >
+      <PageBody>
+        <Box className={classes.content_body}>
           <h1>Productor Externo</h1>
           <p>Page Body</p>
         </Box>
       </PageBody>
-    </React.Fragment>
+    </Box>
   );
 };
 

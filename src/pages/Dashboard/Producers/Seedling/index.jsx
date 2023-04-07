@@ -1,34 +1,22 @@
 import React from 'react';
 import { Box, Button, makeStyles } from '@material-ui/core';
+
 import PageBody from '../../../../components/Dashboard/PageBody';
 import PageHeader from '../../../../components/Dashboard/PageHeader';
-
-const useStyles = makeStyles((theme) => ({
-  leftSpacing: {
-    marginRight: theme.spacing(1),
-  },
-}));
-
+import { useStyles } from './seedling.styles';
 const Seedling = () => {
   const classes = useStyles();
 
   return (
-    <React.Fragment>
+    <Box>
       <PageHeader title='Productores Semilleristas'></PageHeader>
-      <PageBody style={{ display: 'flex' }}>
-        <Box
-          flexGrow='1'
-          width='100%'
-          display='flex'
-          flexDirection='column'
-          alignItems='center'
-          justifyContent='center'
-        >
+      <PageBody>
+        <Box className={classes.content_body}>
           <h1>Productor Semillerista</h1>
           <p>Page Body</p>
         </Box>
       </PageBody>
-    </React.Fragment>
+    </Box>
   );
 };
 

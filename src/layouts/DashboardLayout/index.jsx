@@ -28,18 +28,10 @@ const DashboardLayout = ({ navigationData, children }) => {
           data={navigationData}
         />
       </Hidden>
-      <Box className={classes.content}>
+      <main className={classes.content}>
         <Box className={classes.toolbar} />
-        <Box
-          style={{
-            flex: 1,
-            display: 'flex',
-            flexDirection: 'column',
-          }}
-        >
-          {children}
-        </Box>
-      </Box>
+        <Box>{children}</Box>
+      </main>
     </Container>
   );
 };
