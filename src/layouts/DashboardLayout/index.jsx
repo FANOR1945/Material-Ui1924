@@ -1,5 +1,5 @@
 import React from 'react';
-import { CssBaseline, Hidden, Box } from '@material-ui/core';
+import { Hidden, Box } from '@material-ui/core';
 import SidebarNavigation from '../../components/Dashboard/Sidebar/SidebarNavigation';
 import { useStyles } from './dashboard_layout.styles';
 import Header from '../../components/Dashboard/Header';
@@ -11,7 +11,6 @@ const DashboardLayout = ({ navigationData, children }) => {
 
   return (
     <Container>
-      <CssBaseline />
       <Header handleDrawerToggle={handleDrawerToggle} />
       <Hidden smDown>
         <SidebarNavigation
@@ -28,10 +27,10 @@ const DashboardLayout = ({ navigationData, children }) => {
           data={navigationData}
         />
       </Hidden>
-      <main className={classes.content}>
+      <Box className={classes.content}>
         <Box className={classes.toolbar} />
         <Box>{children}</Box>
-      </main>
+      </Box>
     </Container>
   );
 };

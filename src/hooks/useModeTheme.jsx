@@ -1,29 +1,19 @@
-import { useState } from 'react';
-import { createMuiTheme } from '@material-ui/core';
-import { themeL, themeD } from '../themes';
+import { useContext } from 'react';
+import { CustomThemeContext } from '../assets/Theme/themes/CustomThemeProvider';
 const useModeTheme = () => {
-  const [darkMode, setDarkMode] = useState(() => {
-    const dark = localStorage.getItem('dark');
-    if (dark) {
-      return JSON.parse(dark);
+  const { currentTheme, setTheme } = useContext(CustomThemeContext);
+  const isDark = Boolean(currentTheme === 'dark');
+
+  const handleThemeChange = (event) => {
+    const { checked } = event.target;
+    if (checked) {
+      setTheme('dark');
     } else {
-      return false;
+      setTheme('normal');
     }
-  });
-
-  const darkModeToggle = () => {
-    setDarkMode(!darkMode);
-    localStorage.setItem('dark', !darkMode);
   };
 
-  const themeSwitchCofig = {
-    state: darkMode,
-    handler: darkModeToggle,
-  };
-
-  const appliedTheme = createMuiTheme(darkMode ? themeD : themeL);
-
-  return [themeSwitchCofig, appliedTheme];
+  return [isDark, handleThemeChange];
 };
 
 export default useModeTheme;

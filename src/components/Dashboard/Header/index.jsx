@@ -6,9 +6,13 @@ import {
   Typography,
   Button,
 } from '@material-ui/core';
+
+import Switch from '@material-ui/core/Switch';
 import { Menu as MenuIcon } from '@material-ui/icons';
 import { useStyles } from './header.styles';
+import useModeTheme from '../../../hooks/useModeTheme';
 const Header = (props) => {
+  const [isDark, handleThemeChange] = useModeTheme();
   const logout = () => {
     sessionStorage.clear();
     window.location.href = '/';
@@ -16,7 +20,10 @@ const Header = (props) => {
   const classes = useStyles();
 
   return (
-    <AppBar position='fixed' className={classes.appBar}>
+    <AppBar
+      position='fixed'
+      className={classes.appBar}
+    >
       <Toolbar>
         <IconButton
           color='inherit'
@@ -27,10 +34,22 @@ const Header = (props) => {
         >
           <MenuIcon fontSize='large' />
         </IconButton>
-        <Typography variant='h6' className={classes.tittle}>
+        <Typography
+          variant='h6'
+          className={classes.tittle}
+        >
           Planta Betanzos
         </Typography>
-        <Button variant='text' onClick={() => logout()}>
+
+        <Switch
+          checked={isDark}
+          onChange={handleThemeChange}
+        />
+
+        <Button
+          variant='text'
+          onClick={() => logout()}
+        >
           Fanor
         </Button>
       </Toolbar>
