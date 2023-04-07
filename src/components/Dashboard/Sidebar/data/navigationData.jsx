@@ -30,7 +30,7 @@ export const mainNavigation = [
     ],
   },
   {
-    name: 'Nuestas Semillas',
+    name: 'Nuestras Semillas',
     icon: PeopleAlt,
     url: `/seeds_varieties`,
   },

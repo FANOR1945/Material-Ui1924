@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router';
+
 const useDrawer = () => {
   const history = useHistory();
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -7,7 +8,7 @@ const useDrawer = () => {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
-  React.useEffect(() => {
+  useEffect(() => {
     history.listen(() => setMobileOpen(false));
   }, [history]);
 

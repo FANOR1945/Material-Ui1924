@@ -1,36 +1,15 @@
 import React from 'react';
-import { createTheme } from '@material-ui/core';
 import { ThemeProvider } from '@material-ui/styles';
-import { BrowserRouter as Router, Switch } from 'react-router-dom';
 import DashboardLayout from '../layouts/DashboardLayout';
-import { themeL, themeD } from '../themes';
 import {
   mainNavigation,
   mainRoutes,
 } from '../components/Dashboard/Sidebar/data';
 import RoutesWithLayout from '../components/Dashboard/Sidebar/RoutesWithLayout';
+import useModeTheme from '../hooks/useModeTheme';
 
 const PrivateRoutes = () => {
-  const [darkMode, setDarkMode] = React.useState(() => {
-    const dark = localStorage.getItem('dark');
-    if (dark) {
-      return JSON.parse(dark);
-    } else {
-      return false;
-    }
-  });
-
-  const darkModeToggle = () => {
-    setDarkMode(!darkMode);
-    localStorage.setItem('dark', !darkMode);
-  };
-
-  const themeSwitchCofig = {
-    state: darkMode,
-    handler: darkModeToggle,
-  };
-
-  const appliedTheme = createTheme(darkMode ? themeD : themeL);
+  const [themeSwitchCofig, appliedTheme] = useModeTheme();
   return (
     <ThemeProvider theme={appliedTheme}>
       <RoutesWithLayout
