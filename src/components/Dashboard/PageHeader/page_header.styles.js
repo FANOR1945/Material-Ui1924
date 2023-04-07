@@ -6,7 +6,7 @@ export const useStyles = makeStyles((theme) => ({
     color: theme.palette.text.secondary,
     display: 'flex',
     justifyContent: 'space-between',
-    padding: theme.spacing(2),
+    padding: theme.spacing(2.5),
     flexDirection: 'column',
   },
   toolbar: {
