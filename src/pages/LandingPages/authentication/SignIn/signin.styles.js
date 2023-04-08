@@ -45,6 +45,7 @@ export const useStyles = makeStyles((theme) => ({
   link: {
     fontSize: '0.8rem',
     color: 'white',
+    cursor: 'pointer',
   },
   typography: { fontSize: '1rem', color: 'white', textAlign: 'center' },
 }));

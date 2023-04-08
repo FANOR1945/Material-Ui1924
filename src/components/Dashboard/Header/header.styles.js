@@ -16,4 +16,9 @@ export const useStyles = makeStyles((theme) => ({
       display: 'none',
     },
   },
+  button: {
+    width: '5rem',
+    height: 30,
+    borderRadius: '3rem',
+  },
 }));

@@ -1,16 +1,17 @@
 import React from 'react';
-import { Box, Grid, Link, Hidden, Typography } from '@material-ui/core';
+import { Box, Grid, Hidden, Typography } from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import { Content } from '../../../../components/Global';
 import { useStyles } from './signin.styles';
 import logoa from '../../../../assets/fonts/images/logo_a.png';
 import PageLayout from '../../../../layouts/PageLayout';
-import MyTextFieldInput from '../../../../components/Global/MyTextField';
-import MyButton from '../../../../components/Global/MyButton';
-
+import { MyTextField } from '../../../../components/Global';
+import { MyButton } from '../../../../components/Global';
+import useClicked from '../../../../hooks/useClicked';
 const SignIn = () => {
   const classes = useStyles();
+  const [onClicked] = useClicked();
 
   return (
     <PageLayout>
@@ -35,7 +36,7 @@ const SignIn = () => {
               className={classes.align_image_form}
             />
             <Content className={classes.form}>
-              <MyTextFieldInput
+              <MyTextField
                 className={classes.input}
                 color='#E9F7EF'
                 font='#A6ACAF'
@@ -44,7 +45,7 @@ const SignIn = () => {
                 type='text'
               />
 
-              <MyTextFieldInput
+              <MyTextField
                 className={classes.input}
                 color='#E9F7EF'
                 font='#A6ACAF'
@@ -52,11 +53,7 @@ const SignIn = () => {
                 name='password'
                 type='password'
               />
-
-              <Link
-                href='/major'
-                underline='none'
-              >
+              <Box onClick={() => onClicked('/major')}>
                 <MyButton
                   color='orange'
                   hover='#D4AC0D'
@@ -66,15 +63,12 @@ const SignIn = () => {
                     Iniciar Sesión
                   </Typography>
                 </MyButton>{' '}
-              </Link>
-              <Link
-                href='/re-password'
-                underline='none'
-              >
+              </Box>
+              <Box onClick={() => onClicked('/re-password')}>
                 <Typography className={classes.link}>
                   ¿Olvidaste tu Contraseña?
                 </Typography>
-              </Link>
+              </Box>
               {/*}
               <Link
                 href='#'

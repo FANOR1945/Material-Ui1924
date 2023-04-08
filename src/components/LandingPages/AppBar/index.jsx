@@ -12,7 +12,9 @@ import logoImage from '../../../assets/fonts/images/logo.png';
 import logo1Image from '../../../assets/fonts/images/logo_login.png';
 import { Content } from '../../../components/Global';
 import { useStyles } from './app_bar.styles';
+import useClicked from '../../../hooks/useClicked';
 const AppBar = (props) => {
+  const [onClicked] = useClicked();
   const classes = useStyles();
   return (
     <Grid
@@ -24,51 +26,36 @@ const AppBar = (props) => {
         container
         className={classes.griditems}
       >
-        <Link href='/'>
-          {' '}
-          <Box
-            component='img'
-            src={logoImage}
-            className={classes.image_logo}
-          />
-        </Link>
+        <Box
+          onClick={() => onClicked('/')}
+          component='img'
+          src={logoImage}
+          className={classes.image_logo}
+        />
+
         <Hidden smDown>
           <Content className={classes.menu_landing_pages}>
-            <Link
-              href='/about-us'
-              underline='none'
-            >
+            <Box onClick={() => onClicked('/about-us')}>
               <Typography className={classes.tittle}>Sobre Nosotros</Typography>
-            </Link>
-            <Link
-              href='/seeds-ours'
-              underline='none'
-            >
+            </Box>
+            <Box onClick={() => onClicked('/seeds-ours')}>
               <Typography className={classes.tittle}>
                 Nuestras Semillas
               </Typography>
-            </Link>
-            <Link
-              href='/services-ours'
-              underline='none'
-            >
+            </Box>
+            <Box onClick={() => onClicked('/services-ours')}>
               <Typography className={classes.tittle}>Servicios</Typography>
-            </Link>
-            <Link
-              href='/contact-us'
-              underline='none'
-            >
+            </Box>
+            <Box onClick={() => onClicked('/contact-us')}>
               <Typography className={classes.tittle}>Contacto</Typography>
-            </Link>
-          </Content>
-
-          <Link href='/sign-in'>
-            <Box
-              component='img'
-              src={logo1Image}
-              className={classes.image_signin}
-            />
-          </Link>
+            </Box>
+          </Content>{' '}
+          <Box
+            onClick={() => onClicked('/sign-in')}
+            component='img'
+            src={logo1Image}
+            className={classes.image_signin}
+          />
         </Hidden>
         <Hidden only={['md', 'lg', 'xl']}>
           <IconButton

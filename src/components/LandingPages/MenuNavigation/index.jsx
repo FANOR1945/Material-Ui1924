@@ -1,26 +1,15 @@
 import React from 'react';
-import useReactRouter from 'use-react-router';
-import { List, Typography, Link } from '@material-ui/core';
-
-import MyButton from '../../Global/MyButton';
+import { List, Typography, Box } from '@material-ui/core';
+import { MyButton } from '../../Global';
 import { useStyles } from './menu_navigation';
-
+import useClicked from '../../../hooks/useClicked';
 const MenuNavigation = () => {
-  const { history, location } = useReactRouter();
+  const [onClicked] = useClicked();
   const classes = useStyles();
-  const [expanded, setExpanded] = React.useState(false);
-
-  const onItemClicked = (path) => {
-    setExpanded(false);
-    return history.push(path);
-  };
 
   return (
     <List className={classes.root}>
-      <Link
-        href='/'
-        underline='none'
-      >
+      <Box onClick={() => onClicked('/')}>
         <MyButton
           color='#212F3C'
           font='#EBF5FB'
@@ -29,11 +18,8 @@ const MenuNavigation = () => {
         >
           <Typography className={classes.typography}>PRINCIPAL</Typography>
         </MyButton>
-      </Link>
-      <Link
-        href='/sign-in'
-        underline='none'
-      >
+      </Box>
+      <Box onClick={() => onClicked('/sign-in')}>
         <MyButton
           color='#212F3C'
           font='#EBF5FB'
@@ -42,11 +28,8 @@ const MenuNavigation = () => {
         >
           <Typography className={classes.typography}>INGRESAR</Typography>
         </MyButton>
-      </Link>
-      <Link
-        href='/about-us'
-        underline='none'
-      >
+      </Box>
+      <Box onClick={() => onClicked('/about-us')}>
         <MyButton
           color='#212F3C'
           font='#EBF5FB'
@@ -55,11 +38,8 @@ const MenuNavigation = () => {
         >
           <Typography className={classes.typography}>SOBRE NOSOTROS</Typography>
         </MyButton>
-      </Link>
-      <Link
-        href='/seeds-ours'
-        underline='none'
-      >
+      </Box>
+      <Box onClick={() => onClicked('/seeds-ours')}>
         <MyButton
           color='#212F3C'
           font='#EBF5FB'
@@ -70,11 +50,8 @@ const MenuNavigation = () => {
             NUESTRAS SEMILLAS
           </Typography>
         </MyButton>
-      </Link>
-      <Link
-        href='/services-ours'
-        underline='none'
-      >
+      </Box>
+      <Box onClick={() => onClicked('/services-ours')}>
         <MyButton
           color='#212F3C'
           font='#EBF5FB'
@@ -83,11 +60,8 @@ const MenuNavigation = () => {
         >
           <Typography className={classes.typography}>SERVICIOS</Typography>
         </MyButton>
-      </Link>
-      <Link
-        href='/contact-us'
-        underline='none'
-      >
+      </Box>
+      <Box onClick={() => onClicked('/contact-us')}>
         <MyButton
           color='#212F3C'
           font='#EBF5FB'
@@ -96,7 +70,7 @@ const MenuNavigation = () => {
         >
           <Typography className={classes.typography}>CONTACTO</Typography>
         </MyButton>
-      </Link>
+      </Box>
     </List>
   );
 };

@@ -4,7 +4,7 @@ import PoppinsRegulare from '../../fonts/poppins/PoppinsRegular.ttf';
 const PoppinsRegular = {
   fontFamily: 'PoppinsRegular',
   fontStyle: 'Regular ',
-  fontWeight: 600,
+  fontWeight: 200,
   src: `url(${PoppinsRegulare})`,
 };
 const theme = createTheme({

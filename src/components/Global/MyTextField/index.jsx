@@ -1,7 +1,7 @@
 import React from "react";
 import { TextField } from "@material-ui/core";
 import { useStylesReddit } from "./my_textfield.styles";
-const MyTextField = ({ children, className, ...props }) => {
+export const MyTextField = ({ children, className, ...props }) => {
   const { color, ...other } = props;
   const classes = useStylesReddit(props);
 
@@ -23,4 +23,3 @@ const MyTextField = ({ children, className, ...props }) => {
     </>
   );
 };
-export default MyTextField;
