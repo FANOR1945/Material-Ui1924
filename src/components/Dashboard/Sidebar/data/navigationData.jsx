@@ -29,10 +29,28 @@ export const mainNavigation = [
       },
     ],
   },
+
   {
-    name: 'Nuestras Semillas',
+    name: 'Variedades',
     icon: PeopleAlt,
     url: `/seeds_varieties`,
+  },
+  {
+    name: 'Recepción',
+    icon: ImportContacts,
+    url: `/seed_repection`,
+    navigationData: [
+      {
+        name: 'Ingresos',
+        icon: MenuBook,
+        url: `/seed_reception/income`,
+      },
+      {
+        name: 'Egresos',
+        icon: PostAdd,
+        url: `/seed_reception/discharge`,
+      },
+    ],
   },
   {
     name: 'Tarifas',

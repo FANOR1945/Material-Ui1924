@@ -26,15 +26,15 @@ export const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('sm')]: {
       width: theme.spacing(7),
       flexDirection: 'column',
-      justifyContent: 'center',
+      justifyContent: 'left',
     },
   },
   listIcon: {
     color: 'inherit',
-    justifyContent: 'center',
+    justifyContent: 'left',
   },
   listItemText: {
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up('md')]: {
       fontSize: 9,
     },
   },

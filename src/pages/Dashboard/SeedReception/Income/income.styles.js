@@ -5,11 +5,6 @@ export const useStyles = makeStyles((theme) => ({
     border: '1px solid blue',
     width: '100%',
     textAlign: 'center',
-  
-  },
-  button: {
-    width: '6rem',
-    height: 30,
-    borderRadius: '3rem',
+    flexDirection: 'column',
   },
 }));

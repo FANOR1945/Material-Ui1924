@@ -36,7 +36,7 @@ const Header = (props) => {
           variant='h6'
           className={classes.tittle}
         >
-          Planta Betanzos
+          Departamental Potosí
         </Typography>
 
         <Switch

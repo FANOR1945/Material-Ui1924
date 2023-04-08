@@ -2,6 +2,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 export const useStyles = makeStyles((theme) => ({
   appBar: {
+    position: 'fixed',
     [theme.breakpoints.up('md')]: {
       width: `calc(100% - ${240}px)`,
       marginLeft: 240,

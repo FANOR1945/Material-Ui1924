@@ -1,12 +1,12 @@
 import React from 'react';
-import { Box, Toolbar, Typography, Divider } from '@material-ui/core';
+import { Box, Toolbar, Typography, Divider, Grid } from '@material-ui/core';
 import { useStyles } from './page_header.styles';
 import { Content } from '../../Global';
 
 const PageHeader = ({ title, children, style }) => {
   const classes = useStyles();
   return (
-    <Content>
+    <Grid>
       <Box
         position='fixed'
         width='100%'
@@ -15,7 +15,6 @@ const PageHeader = ({ title, children, style }) => {
         <Toolbar
           variant='dense'
           className={classes.toolbar}
-          style={{ ...style }}
         >
           {title && (
             <Typography
@@ -28,10 +27,9 @@ const PageHeader = ({ title, children, style }) => {
           )}
           {children}
         </Toolbar>
-        <Divider />
       </Box>
       <Toolbar variant='dense' />
-    </Content>
+    </Grid>
   );
 };
 

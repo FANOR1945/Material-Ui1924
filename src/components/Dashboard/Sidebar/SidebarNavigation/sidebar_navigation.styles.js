@@ -11,4 +11,9 @@ export const useStyles = makeStyles((theme) => ({
   list: {
     listStyle: 'none',
   },
+  logo_plant1: {
+    width: 220,
+    height: 50,
+    display: 'flex',
+  },
 }));
