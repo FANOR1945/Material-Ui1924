@@ -1,12 +1,20 @@
 import React from 'react';
-import { Box, Toolbar, Typography, Divider, Grid } from '@material-ui/core';
+import {
+  Box,
+  Toolbar,
+  Typography,
+  Divider,
+  Grid,
+  Card,
+} from '@material-ui/core';
 import { useStyles } from './page_header.styles';
-import { Content } from '../../Global';
 
-const PageHeader = ({ title, children, style }) => {
+const PageHeader = (props) => {
   const classes = useStyles();
+  const { title, icon, children } = props;
+
   return (
-    <Grid>
+    <Grid container>
       <Box
         position='fixed'
         width='100%'
@@ -16,6 +24,8 @@ const PageHeader = ({ title, children, style }) => {
           variant='dense'
           className={classes.toolbar}
         >
+          {' '}
+          <Card className={classes.pageIcon}>{icon}</Card>
           {title && (
             <Typography
               variant='h6'

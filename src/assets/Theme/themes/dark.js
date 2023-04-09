@@ -30,6 +30,7 @@ const theme = createTheme({
       main: '#555555',
       contrastText: '#ffffff',
     },
+
     error: {
       main: red.A400,
     },
@@ -39,6 +40,7 @@ const theme = createTheme({
       '@global': {
         '@font-face': [PoppinsRegular],
       },
+
       body: {
         fontFamily: ['PoppinsRegular'],
       },
@@ -46,6 +48,11 @@ const theme = createTheme({
         margin: 0,
         padding: 0,
       },
+    },
+  },
+  props: {
+    MuiIconButton: {
+      disableRipple: true,
     },
   },
 });

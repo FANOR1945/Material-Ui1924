@@ -38,11 +38,6 @@ export const mainRoutes = [
         path: `/producers/extern`,
         component: lazy(() => importPage('Producers', 'Extern')),
       },
-
-      {
-        path: `/producers/addgrowers`,
-        component: lazy(() => importPage('Producers', 'AddGrowers')),
-      },
     ],
   },
 

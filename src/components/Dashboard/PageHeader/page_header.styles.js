@@ -8,7 +8,10 @@ export const useStyles = makeStyles((theme) => ({
   },
   headerTitle: {
     fontWeight: 400,
-
     flexGrow: 0.7,
+  },
+  pageIcon: {
+    marginRight: theme.spacing(1),
+    color: 'green',
   },
 }));
