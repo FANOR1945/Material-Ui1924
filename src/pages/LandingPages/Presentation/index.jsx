@@ -47,20 +47,6 @@ const Presentation = () => {
           name='password'
           type='password'
         />
-        <MyButton
-          color='#F9EBEA'
-          font='black'
-          className={classes.button}
-        >
-          Patricia
-        </MyButton>
-        <MyButton
-          color='#C0392B'
-          font='white'
-          className={classes.button}
-        >
-          2023
-        </MyButton>
       </Grid>
     </PageLayout>
   );

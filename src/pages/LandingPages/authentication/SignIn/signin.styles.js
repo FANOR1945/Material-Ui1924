@@ -6,31 +6,33 @@ import { Button } from '@material-ui/core';
 import background from '../../../../assets/fonts/images/logo_b.png';
 export const useStyles = makeStyles((theme) => ({
   layout_login: {
-    width: '100%',
     justifyContent: 'center',
     padding: theme.spacing(5),
-    // border: '2px solid red',
+    border: '2px solid red',
   },
 
   paperstyle: {
     borderRadius: '1rem',
     padding: theme.spacing(1),
     backgroundImage: `url(${background})`,
+    border: '2px solid red',
   },
 
   align_image_form: {
-    width: '20rem',
+    width: '15rem',
     marginBottom: '2rem',
+    justifyContent: 'center',
+    border: '2px solid red',
   },
 
   logo: {
     marginBottom: '-25px',
   },
-
   form: {
     flexDirection: 'column',
     textAlign: 'center',
     justifyContent: 'space-between',
+    border: '2px solid red',
   },
 
   input: {
