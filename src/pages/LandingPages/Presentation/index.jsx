@@ -12,6 +12,7 @@ const Presentation = () => {
         <MyButton
           color='blue'
           font='#EBF5FB'
+          hover='red'
           className={classes.button}
         >
           fanor
