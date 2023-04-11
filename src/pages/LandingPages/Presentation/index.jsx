@@ -12,6 +12,7 @@ const Presentation = () => {
         <MyButton
           color='blue'
           font='#EBF5FB'
+          hover='red'
           className={classes.button}
         >
           fanor
@@ -30,6 +31,7 @@ const Presentation = () => {
         >
           Aguirre
         </MyButton>
+        {/*
         <MyTextField
           className={classes.input}
           color='blue'
@@ -45,21 +47,7 @@ const Presentation = () => {
           placeholder='Contraseña'
           name='password'
           type='password'
-        />
-        <MyButton
-          color='#F9EBEA'
-          font='black'
-          className={classes.button}
-        >
-          Patricia
-        </MyButton>
-        <MyButton
-          color='#C0392B'
-          font='white'
-          className={classes.button}
-        >
-          2023
-        </MyButton>
+  />*/}
       </Grid>
     </PageLayout>
   );
