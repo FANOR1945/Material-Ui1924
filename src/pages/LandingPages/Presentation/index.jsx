@@ -31,6 +31,7 @@ const Presentation = () => {
         >
           Aguirre
         </MyButton>
+        {/*
         <MyTextField
           className={classes.input}
           color='blue'
@@ -46,7 +47,7 @@ const Presentation = () => {
           placeholder='Contraseña'
           name='password'
           type='password'
-        />
+  />*/}
       </Grid>
     </PageLayout>
   );

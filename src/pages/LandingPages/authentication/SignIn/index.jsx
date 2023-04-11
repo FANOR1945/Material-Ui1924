@@ -15,7 +15,7 @@ import logoa from '../../../../assets/fonts/images/logo_a.png';
 import PageLayout from '../../../../layouts/PageLayout';
 import { MyTextField } from '../../../../components/Global';
 import { MyButton } from '../../../../components/Global';
-import useClicked from '../../../../hooks/useClicked';
+
 import Swal from 'sweetalert2';
 import Axios from 'axios';
 import { Form } from '../../../../hooks/useForm';
@@ -23,13 +23,16 @@ import Controls from '../../../../components/Global/controls/Controls';
 const SignIn = () => {
   const classes = useStyles();
 
-  const [correomovil, setCorreomovil] = useState('');
+  const [correo, setCorreo] = useState('');
   const [contrasena, setContrasena] = useState('');
 
   const login = async (e) => {
     e.preventDefault();
-    const usuario = { correomovil, contrasena };
-    const respuesta = await Axios.post('/primeroasec/login', usuario);
+    const usuario = {
+      correo,
+      contrasena,
+    };
+    const respuesta = await Axios.post('/ciudad/login', usuario);
 
     console.log(respuesta);
 
@@ -43,12 +46,11 @@ const SignIn = () => {
       });
     } else {
       const token = respuesta.data.token;
-      const primernombre = respuesta.data.primernombre;
-
+      const nombre = respuesta.data.nombre;
       const idUsuario = respuesta.data.id;
 
-      sessionStorage.setItem(' token', token);
-      sessionStorage.setItem('primernombre', primernombre);
+      sessionStorage.setItem('token', token);
+      sessionStorage.setItem('nombre', nombre);
       sessionStorage.setItem('idUsuario', idUsuario);
 
       Swal.fire({
@@ -61,8 +63,6 @@ const SignIn = () => {
     }
   };
 
-  const btnstyle = { margin: '8px 0' };
-
   return (
     <PageLayout>
       <Content>
@@ -72,13 +72,11 @@ const SignIn = () => {
         >
           <Grid className={classes.paperstyle}>
             <Hidden only={['md', 'lg']}>
-              <Grid container>
-                <Box className={classes.logo}>
-                  <IconButton>
-                    <CloseIcon />
-                  </IconButton>
-                </Box>
-              </Grid>
+              <Box className={classes.logo}>
+                <IconButton>
+                  <CloseIcon />
+                </IconButton>
+              </Box>
             </Hidden>
             <Box
               component='img'
@@ -88,38 +86,34 @@ const SignIn = () => {
             <Form
               novalidate
               onSubmit={login}
+              className={classes.form}
             >
-              {' '}
-              <Content className={classes.form}>
-                <Box>
-                  <MyTextField
-                    className={classes.input}
-                    color='#E9F7EF'
-                    font='#A6ACAF'
-                    placeholder='Email'
-                    name='email'
-                    onChange={(e) => setCorreomovil(e.target.value)}
-                  />
-                  <MyTextField
-                    className={classes.input}
-                    color='#E9F7EF'
-                    font='#A6ACAF'
-                    placeholder='Contraseña'
-                    name='password'
-                    type='password'
-                    onChange={(e) => setContrasena(e.target.value)}
-                  />
+              <MyTextField
+                className={classes.input}
+                color='#E9F7EF'
+                font='#A6ACAF'
+                placeholder='Email'
+                name='email'
+                onChange={(e) => setCorreo(e.target.value)}
+              />
+              <MyTextField
+                className={classes.input}
+                color='#E9F7EF'
+                font='#A6ACAF'
+                placeholder='Contraseña'
+                name='password'
+                type='password'
+                onChange={(e) => setContrasena(e.target.value)}
+              />
 
-                  <Controls.Button
-                    text='Iniciar Sesión'
-                    variant='outlined'
-                    type='submit'
-                    color='orange'
-                    hover='#D4AC0D'
-                    className={classes.button}
-                  />
-                </Box>{' '}
-              </Content>
+              <Controls.Button
+                text='Iniciar Sesión'
+                variant='outlined'
+                type='submit'
+                color='orange'
+                hover='#D4AC0D'
+                className={classes.button}
+              />
             </Form>
             <Grid align='center'>
               <Typography>

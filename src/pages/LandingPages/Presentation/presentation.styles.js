@@ -4,10 +4,10 @@ export const useStyles = makeStyles((theme) => ({
   button: {
     width: '15rem',
     height: 48,
-    borderRadius: '1rem',
+    borderRadius: '3rem',
   },
   input: {
-    width: '20rem',
+    width: '15rem',
     height: 48,
     borderRadius: '3rem',
     color: 'white',
