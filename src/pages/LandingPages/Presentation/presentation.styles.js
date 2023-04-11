@@ -1,16 +1,16 @@
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from "@material-ui/core";
 
 export const useStyles = makeStyles((theme) => ({
   button: {
-    width: '15rem',
+    width: "20rem",
     height: 48,
-    borderRadius: '3rem',
+    borderRadius: "3rem",
   },
   input: {
-    width: '15rem',
+    width: "20rem",
     height: 48,
-    borderRadius: '3rem',
-    color: 'white',
+    borderRadius: "3rem",
+    color: "white",
     padding: theme.spacing(1),
   },
 }));
